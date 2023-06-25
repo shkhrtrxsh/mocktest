@@ -1,0 +1,92 @@
+Ans 1)
+      class Stack {
+  constructor() {
+    this.items = []; // Array to store stack elements
+  }
+
+  // Push element to the top of the stack
+  push(element) {
+    this.items.push(element);
+  }
+
+  // Remove and return the top element from the stack
+  pop() {
+    if (this.isEmpty()) {
+      return null; // Return null if stack is empty
+    }
+    return this.items.pop();
+  }
+
+  // Check if the stack is empty
+  isEmpty() {
+    return this.items.length === 0;
+  }
+}
+
+// Usage example:
+const stack = new Stack();
+
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+console.log(stack.pop()); // Output: 30
+console.log(stack.isEmpty()); // Output: false
+console.log(stack.pop()); // Output: 20
+console.log(stack.pop()); // Output: 10
+console.log(stack.isEmpty()); // Output: true
+console.log(stack.pop()); // Output: null
+Ans 2)
+     class Queue {
+  constructor() {
+    this.items = []; // Array to store queue elements
+  }
+
+  // Add an element to the back of the queue
+  enqueue(element) {
+    this.items.push(element);
+  }
+
+  // Remove and return the front element from the queue
+  dequeue() {
+    if (this.isEmpty()) {
+      return null; // Return null if queue is empty
+    }
+    return this.items.shift();
+  }
+
+  // Get the front element of the queue without removing it
+  peek() {
+    if (this.isEmpty()) {
+      return null; // Return null if queue is empty
+    }
+    return this.items[0];
+  }
+
+  // Check if the queue is empty
+  isEmpty() {
+    return this.items.length === 0;
+  }
+
+  // Get the size of the queue
+  size() {
+    return this.items.length;
+  }
+}
+
+// Usage example:
+const queue = new Queue();
+
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
+
+console.log(queue.dequeue()); // Output: 10
+console.log(queue.isEmpty()); // Output: false
+console.log(queue.peek()); // Output: 20
+console.log(queue.dequeue()); // Output: 20
+console.log(queue.dequeue()); // Output: 30
+console.log(queue.isEmpty()); // Output: true
+console.log(queue.dequeue()); // Output: null
+console.log(queue.size()); // Output: 0
+
